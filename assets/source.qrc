@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/ui">
+        <file>ui/Sheikah - Frame Art.png</file>
+        <file>ui/Text=false, Continue=true.png</file>
+        <file>ui/Selector.png</file>
+    </qresource>
+    <qresource prefix="/other">
+        <file>other/Icon=Tower.png</file>
+        <file>other/Illustration=Memories.png</file>
+        <file>other/Illustration=Rupee.png</file>
+        <file>other/Illustration=Slate.png</file>
+        <file>other/Illustration=Sword.png</file>
+        <file>other/Logo - Full.png</file>
+    </qresource>
+    <qresource prefix="/map">
+        <file>map/World Map - Full @25%.png</file>
+    </qresource>
+    <qresource prefix="/backgrounds">
+        <file>backgrounds/Color=Dark Blue.png</file>
+        <file>backgrounds/Property 1=Center.png</file>
+    </qresource>
+</RCC>

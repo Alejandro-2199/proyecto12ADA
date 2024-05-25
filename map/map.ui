@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>map</class>
+ <widget class="QDialog" name="map">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1023</width>
+    <height>852</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1023</width>
+    <height>852</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1023</width>
+    <height>852</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	image: url(:/ui/ui/Sheikah - Frame Art.png);
+    background-image: url('C:/Users/aleja/OneDrive/Documents/Qt/Proyecto_2/assets/map/World Map - Full @25%.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+}</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>296</x>
+     <y>232</y>
+     <width>170</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>170</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Hebra Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>177</x>
+     <y>313</y>
+     <width>197</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>170</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Tabantha Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>334</x>
+     <y>335</y>
+     <width>200</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>170</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ridgeland Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>418</x>
+     <y>433</y>
+     <width>171</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>170</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Central Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>172</x>
+     <y>558</y>
+     <width>181</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>170</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Gerudo Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>289</x>
+     <y>606</y>
+     <width>211</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>170</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>250</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Wasteland Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_7">
+   <property name="geometry">
+    <rect>
+     <x>435</x>
+     <y>544</y>
+     <width>231</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>170</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>250</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Great Plateau Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_8">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>651</y>
+     <width>161</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Lake Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_9">
+   <property name="geometry">
+    <rect>
+     <x>577</x>
+     <y>539</y>
+     <width>241</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>300</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Dueling Peaks Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_10">
+   <property name="geometry">
+    <rect>
+     <x>717</x>
+     <y>582</y>
+     <width>181</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>300</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Hateno Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_11">
+   <property name="geometry">
+    <rect>
+     <x>679</x>
+     <y>387</y>
+     <width>181</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>300</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Lanayru Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_12">
+   <property name="geometry">
+    <rect>
+     <x>768</x>
+     <y>274</y>
+     <width>181</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>300</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Akkala Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_13">
+   <property name="geometry">
+    <rect>
+     <x>675</x>
+     <y>255</y>
+     <width>161</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>300</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Eldin Tower</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_14">
+   <property name="geometry">
+    <rect>
+     <x>562</x>
+     <y>263</y>
+     <width>201</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>300</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    background-color: transparent; 
+    color: transparent; 
+    image: url(:/ui/ui/Selector.png);
+    image-position: left center;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    line-height: 53px;
+    color: #BAEFFB;
+    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;
+    filter: blur(0.5px);
+}
+
+QPushButton:hover {
+	visible:true;
+}</string>
+   </property>
+   <property name="text">
+    <string>Woodland Tower</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

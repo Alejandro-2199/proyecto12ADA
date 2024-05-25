@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>transporte</class>
+ <widget class="QDialog" name="transporte">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	image: url('C:/Users/aleja/OneDrive/Documents/Qt/Proyecto_2/assets/other/Illustration=Slate.png');
+	image-position: right;
+    background-image: url('C:/Users/aleja/OneDrive/Documents/Qt/Proyecto_2/assets/backgrounds/Color=Dark Blue.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+}</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>481</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetFixedSize</enum>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>The Wild Breath of Zelda</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #FFF8E7;
+	padding: 2 px;
+}</string>
+        </property>
+        <property name="text">
+         <string> MENU DE RUTAS</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListView" name="listView">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>350</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QListWidget {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(226, 222, 211, 0.3);
+    border-radius: 4px;
+    color: #E2DED3;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 5px;
+    margin: 2px; 
+}
+
+QListWidget::item {
+    padding: 5px;
+}
+
+QListWidget::item:selected {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #E2DED3;
+}
+
+QListWidget::item:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetNoConstraint</enum>
+      </property>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>The Wild Breath of Zelda</family>
+          <pointsize>36</pointsize>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #FFF8E7;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>MENU DE TRANSPORTE</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none; 
+    border-radius: 4px;
+    color: #E2DED3; 
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0; 
+    text-align: center;
+    margin: 1px; 
+    border: 1px solid rgba(226, 222, 211, 0.3); 
+}
+
+
+QPushButton:pressed {
+    background: rgba(0, 0, 0, 0.2); 
+}
+
+
+QPushButton:hover {
+	width: 346px;
+    height: 75px;
+    border: 1px solid #E2DED3;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 8px 2px rgba(227, 227, 200, 0.8), inset 0px 0px 7px 3px rgba(246, 231, 152, 0.5);
+}</string>
+        </property>
+        <property name="text">
+         <string>Viajar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none; 
+    border-radius: 4px;
+    color: #E2DED3; 
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0; 
+    text-align: center;
+    margin: 1px; 
+    border: 1px solid rgba(226, 222, 211, 0.3); 
+}
+
+
+QPushButton:pressed {
+    background: rgba(0, 0, 0, 0.2); 
+}
+
+
+QPushButton:hover {
+	width: 346px;
+    height: 75px;
+    border: 1px solid #E2DED3;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 8px 2px rgba(227, 227, 200, 0.8), inset 0px 0px 7px 3px rgba(246, 231, 152, 0.5);
+}</string>
+        </property>
+        <property name="text">
+         <string>Volver</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetFixedSize</enum>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>The Wild Breath of Zelda</family>
+            <pointsize>20</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: #FFF8E7;
+	padding: 2 px;
+}</string>
+          </property>
+          <property name="text">
+           <string> TORRE DE ORIGEN</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none; 
+    border-radius: 4px;
+    color: #E2DED3; 
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0 10px; 
+    text-align: center;
+    margin: 2px; 
+    border: 1px solid rgba(226, 222, 211, 0.3); 
+}
+
+QComboBox QAbstractItemView {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #E2DED3;
+    border: none;
+    selection-background-color: rgba(0, 0, 0, 0.9);
+    selection-color: #E2DED3;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 5;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid rgba(226, 222, 211, 0.3);
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetFixedSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>The Wild Breath of Zelda</family>
+              <pointsize>20</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #FFF8E7;
+	padding: 2 px;
+}</string>
+            </property>
+            <property name="text">
+             <string> TORRE DE DESTINO</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none; 
+    border-radius: 4px;
+    color: #E2DED3; 
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0 10px; 
+    text-align: center;
+    margin: 2px; 
+    border: 1px solid rgba(226, 222, 211, 0.3); 
+}
+
+QComboBox QAbstractItemView {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #E2DED3;
+    border: none;
+    selection-background-color: rgba(0, 0, 0, 0.9);
+    selection-color: #E2DED3;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 5;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid rgba(226, 222, 211, 0.3);
+}</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>P1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>P2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none; 
+    border-radius: 4px;
+    color: #E2DED3; 
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0; 
+    text-align: center;
+    margin: 1px; 
+    border: 1px solid rgba(226, 222, 211, 0.3); 
+}
+
+
+QPushButton:pressed {
+    background: rgba(0, 0, 0, 0.2); 
+}
+
+
+QPushButton:hover {
+	width: 346px;
+    height: 75px;
+    border: 1px solid #E2DED3;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 8px 2px rgba(227, 227, 200, 0.8), inset 0px 0px 7px 3px rgba(246, 231, 152, 0.5);
+}</string>
+            </property>
+            <property name="text">
+             <string>Ver Rutas</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
