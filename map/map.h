@@ -2,7 +2,8 @@
 #define MAP_H
 
 #include <QDialog>
-#include <QKeyEvent>
+#include <QEvent>
+#include <QMouseEvent>
 
 namespace Ui {
 class map;
@@ -18,10 +19,16 @@ public:
 
 protected:
     void keyPressEvent(QKeyEvent *event) override;
+    void enterEvent(QEnterEvent *event) override;
+    void leaveEvent(QEvent *event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
 
 private:
     Ui::map *ui;
+
+    void updateButtonVisibility(const QPoint &pos);
 };
 
 #endif // MAP_H
+
 

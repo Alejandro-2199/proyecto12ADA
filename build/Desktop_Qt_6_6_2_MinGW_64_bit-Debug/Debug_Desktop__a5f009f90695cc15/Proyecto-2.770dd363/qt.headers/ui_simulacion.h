@@ -23,7 +23,16 @@ public:
     {
         if (simulacion->objectName().isEmpty())
             simulacion->setObjectName("simulacion");
-        simulacion->resize(400, 300);
+        simulacion->resize(1023, 852);
+        simulacion->setMinimumSize(QSize(1023, 852));
+        simulacion->setMaximumSize(QSize(1023, 852));
+        simulacion->setStyleSheet(QString::fromUtf8("QDialog {\n"
+"	image: url(:/ui/ui/Sheikah - Frame Art.png);\n"
+"    background-image: url('C:/Users/aleja/OneDrive/Documents/Qt/Proyecto_2/assets/map/World Map - Full @25%.png');\n"
+"    background-repeat: no-repeat;\n"
+"    background-position: center;\n"
+"    background-color: #ffffff;\n"
+"}"));
 
         retranslateUi(simulacion);
 

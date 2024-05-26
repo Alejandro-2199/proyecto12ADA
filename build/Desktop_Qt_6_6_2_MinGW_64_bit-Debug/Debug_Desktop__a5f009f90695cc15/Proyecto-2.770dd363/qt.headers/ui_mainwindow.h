@@ -65,17 +65,17 @@ public:
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Button, brush);
         palette.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette.setBrush(QPalette::Active, QPalette::Window, brush);
         QBrush brush1(QColor(64, 65, 66, 255));
         brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
         palette.setBrush(QPalette::Active, QPalette::Highlight, brush1);
         palette.setBrush(QPalette::Inactive, QPalette::Button, brush);
         palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
         palette.setBrush(QPalette::Inactive, QPalette::Highlight, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         MainWindow->setPalette(palette);
         MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
 "    background-image: url('C:/Users/aleja/OneDrive/Documents/Qt/Proyecto_2/assets/backgrounds/Property 1=Center.png');\n"
@@ -165,7 +165,6 @@ public:
 "    height: 75px;\n"
 "    border: 1px solid #E2DED3;\n"
 "    background: rgba(0, 0, 0, 0.9);\n"
-"    box-shadow: 0px 0px 8px 2px rgba(227, 227, 200, 0.8), inset 0px 0px 7px 3px rgba(246, 231, 152, 0.5);\n"
 "}\n"
 "\n"
 "\n"
@@ -225,7 +224,6 @@ public:
 "    height: 75px;\n"
 "    border: 1px solid #E2DED3;\n"
 "    background: rgba(0, 0, 0, 0.9);\n"
-"    box-shadow: 0px 0px 8px 2px rgba(227, 227, 200, 0.8), inset 0px 0px 7px 3px rgba(246, 231, 152, 0.5);\n"
 "}\n"
 "\n"
 ""));
@@ -283,7 +281,6 @@ public:
 "    height: 75px;\n"
 "    border: 1px solid #E2DED3;\n"
 "    background: rgba(0, 0, 0, 0.9);\n"
-"    box-shadow: 0px 0px 8px 2px rgba(227, 227, 200, 0.8), inset 0px 0px 7px 3px rgba(246, 231, 152, 0.5);\n"
 "}\n"
 "\n"
 "\n"

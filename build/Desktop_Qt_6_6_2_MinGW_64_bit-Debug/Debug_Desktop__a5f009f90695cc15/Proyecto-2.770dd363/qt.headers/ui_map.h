@@ -33,6 +33,7 @@ public:
     QPushButton *pushButton_12;
     QPushButton *pushButton_13;
     QPushButton *pushButton_14;
+    QPushButton *pushButton_15;
 
     void setupUi(QDialog *map)
     {
@@ -72,16 +73,10 @@ public:
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
 "}"));
         pushButton_2 = new QPushButton(map);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(177, 313, 197, 50));
+        pushButton_2->setGeometry(QRect(30, 312, 197, 50));
         pushButton_2->setMinimumSize(QSize(170, 50));
         pushButton_2->setMaximumSize(QSize(200, 50));
         pushButton_2->setFont(font);
@@ -91,19 +86,13 @@ public:
 "    background-color: transparent; \n"
 "    color: transparent; \n"
 "    image: url(:/ui/ui/Selector.png);\n"
-"    image-position: left center;\n"
-"    text-align: right;\n"
+" 	image-position: right top;\n"
+"    text-align: left;\n"
 "    font-family: 'Roboto';\n"
 "    font-style: italic;\n"
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
 "}"));
         pushButton_3 = new QPushButton(map);
         pushButton_3->setObjectName("pushButton_3");
@@ -124,13 +113,8 @@ public:
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
 "}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
-"}"));
+""));
         pushButton_4 = new QPushButton(map);
         pushButton_4->setObjectName("pushButton_4");
         pushButton_4->setGeometry(QRect(418, 433, 171, 50));
@@ -150,13 +134,8 @@ public:
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
 "}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
-"}"));
+""));
         pushButton_5 = new QPushButton(map);
         pushButton_5->setObjectName("pushButton_5");
         pushButton_5->setGeometry(QRect(172, 558, 181, 50));
@@ -176,16 +155,11 @@ public:
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
 "}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
-"}"));
+""));
         pushButton_6 = new QPushButton(map);
         pushButton_6->setObjectName("pushButton_6");
-        pushButton_6->setGeometry(QRect(289, 606, 211, 50));
+        pushButton_6->setGeometry(QRect(128, 607, 211, 50));
         pushButton_6->setMinimumSize(QSize(170, 50));
         pushButton_6->setMaximumSize(QSize(250, 50));
         pushButton_6->setFont(font);
@@ -195,23 +169,17 @@ public:
 "    background-color: transparent; \n"
 "    color: transparent; \n"
 "    image: url(:/ui/ui/Selector.png);\n"
-"    image-position: left center;\n"
-"    text-align: right;\n"
+" 	image-position: right top;\n"
+"    text-align: left;\n"
 "    font-family: 'Roboto';\n"
 "    font-style: italic;\n"
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
 "}"));
         pushButton_7 = new QPushButton(map);
         pushButton_7->setObjectName("pushButton_7");
-        pushButton_7->setGeometry(QRect(435, 544, 231, 50));
+        pushButton_7->setGeometry(QRect(255, 543, 231, 50));
         pushButton_7->setMinimumSize(QSize(170, 50));
         pushButton_7->setMaximumSize(QSize(250, 50));
         pushButton_7->setFont(font);
@@ -221,23 +189,17 @@ public:
 "    background-color: transparent; \n"
 "    color: transparent; \n"
 "    image: url(:/ui/ui/Selector.png);\n"
-"    image-position: left center;\n"
-"    text-align: right;\n"
+" 	image-position: right top;\n"
+"    text-align: left;\n"
 "    font-family: 'Roboto';\n"
 "    font-style: italic;\n"
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
 "}"));
         pushButton_8 = new QPushButton(map);
         pushButton_8->setObjectName("pushButton_8");
-        pushButton_8->setGeometry(QRect(480, 651, 161, 50));
+        pushButton_8->setGeometry(QRect(369, 651, 161, 50));
         pushButton_8->setMinimumSize(QSize(100, 50));
         pushButton_8->setMaximumSize(QSize(200, 50));
         pushButton_8->setFont(font);
@@ -247,19 +209,13 @@ public:
 "    background-color: transparent; \n"
 "    color: transparent; \n"
 "    image: url(:/ui/ui/Selector.png);\n"
-"    image-position: left center;\n"
-"    text-align: right;\n"
+" 	image-position: right top;\n"
+"    text-align: left;\n"
 "    font-family: 'Roboto';\n"
 "    font-style: italic;\n"
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
 "}"));
         pushButton_9 = new QPushButton(map);
         pushButton_9->setObjectName("pushButton_9");
@@ -280,13 +236,8 @@ public:
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
 "}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
-"}"));
+""));
         pushButton_10 = new QPushButton(map);
         pushButton_10->setObjectName("pushButton_10");
         pushButton_10->setGeometry(QRect(717, 582, 181, 50));
@@ -306,13 +257,8 @@ public:
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
 "}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
-"}"));
+""));
         pushButton_11 = new QPushButton(map);
         pushButton_11->setObjectName("pushButton_11");
         pushButton_11->setGeometry(QRect(679, 387, 181, 50));
@@ -332,13 +278,8 @@ public:
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
 "}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
-"}"));
+""));
         pushButton_12 = new QPushButton(map);
         pushButton_12->setObjectName("pushButton_12");
         pushButton_12->setGeometry(QRect(768, 274, 181, 50));
@@ -358,18 +299,13 @@ public:
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
 "}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
-"}"));
+""));
         pushButton_13 = new QPushButton(map);
         pushButton_13->setObjectName("pushButton_13");
-        pushButton_13->setGeometry(QRect(675, 255, 161, 50));
-        pushButton_13->setMinimumSize(QSize(100, 50));
-        pushButton_13->setMaximumSize(QSize(300, 50));
+        pushButton_13->setGeometry(QRect(675, 255, 151, 51));
+        pushButton_13->setMinimumSize(QSize(0, 0));
+        pushButton_13->setMaximumSize(QSize(300, 300));
         pushButton_13->setFont(font);
         pushButton_13->setLayoutDirection(Qt::LeftToRight);
         pushButton_13->setStyleSheet(QString::fromUtf8("QPushButton {\n"
@@ -384,21 +320,35 @@ public:
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
 "}"));
         pushButton_14 = new QPushButton(map);
         pushButton_14->setObjectName("pushButton_14");
-        pushButton_14->setGeometry(QRect(562, 263, 201, 50));
+        pushButton_14->setGeometry(QRect(411, 264, 201, 50));
         pushButton_14->setMinimumSize(QSize(100, 50));
         pushButton_14->setMaximumSize(QSize(300, 50));
         pushButton_14->setFont(font);
         pushButton_14->setLayoutDirection(Qt::LeftToRight);
         pushButton_14->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    border: none;\n"
+"    background-color: transparent; \n"
+"    color: transparent; \n"
+"    image: url(:/ui/ui/Selector.png);\n"
+" 	image-position: right top;\n"
+"    text-align: left;\n"
+"    font-family: 'Roboto';\n"
+"    font-style: italic;\n"
+"    font-weight: 500;\n"
+"    line-height: 53px;\n"
+"    color: #BAEFFB;\n"
+"}"));
+        pushButton_15 = new QPushButton(map);
+        pushButton_15->setObjectName("pushButton_15");
+        pushButton_15->setGeometry(QRect(593, 674, 161, 50));
+        pushButton_15->setMinimumSize(QSize(100, 50));
+        pushButton_15->setMaximumSize(QSize(200, 50));
+        pushButton_15->setFont(font);
+        pushButton_15->setLayoutDirection(Qt::LeftToRight);
+        pushButton_15->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    border: none;\n"
 "    background-color: transparent; \n"
 "    color: transparent; \n"
@@ -410,12 +360,6 @@ public:
 "    font-weight: 500;\n"
 "    line-height: 53px;\n"
 "    color: #BAEFFB;\n"
-"    text-shadow: 0px 1px 11px #0A8DD7, 0px 0px 10px #4FC0FF;\n"
-"    filter: blur(0.5px);\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	visible:true;\n"
 "}"));
 
         retranslateUi(map);
@@ -440,6 +384,7 @@ public:
         pushButton_12->setText(QCoreApplication::translate("map", "Akkala Tower", nullptr));
         pushButton_13->setText(QCoreApplication::translate("map", "Eldin Tower", nullptr));
         pushButton_14->setText(QCoreApplication::translate("map", "Woodland Tower", nullptr));
+        pushButton_15->setText(QCoreApplication::translate("map", "Faron Tower", nullptr));
     } // retranslateUi
 
 };

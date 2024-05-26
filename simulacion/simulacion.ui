@@ -6,12 +6,33 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1023</width>
+    <height>852</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1023</width>
+    <height>852</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1023</width>
+    <height>852</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	image: url(:/ui/ui/Sheikah - Frame Art.png);
+    background-image: url('C:/Users/aleja/OneDrive/Documents/Qt/Proyecto_2/assets/map/World Map - Full @25%.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+}</string>
   </property>
  </widget>
  <resources/>

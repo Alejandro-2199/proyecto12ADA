@@ -6,10 +6,14 @@ map::map(QWidget *parent) :
     ui(new Ui::map)
 {
     ui->setupUi(this);
-    //ui->pushButton->setVisible(false);
 
+    QList<QPushButton*> buttons = findChildren<QPushButton*>();
+    for (QPushButton *button : buttons) {
+        button->hide();
+    }
+
+    setMouseTracking(true);
 }
-
 
 map::~map()
 {
@@ -22,5 +26,44 @@ void map::keyPressEvent(QKeyEvent *event)
         close();
     } else {
         QDialog::keyPressEvent(event);
+    }
+}
+
+void map::enterEvent(QEnterEvent *event) {
+    updateButtonVisibility(event->position().toPoint());
+    QDialog::enterEvent(event);
+}
+
+void map::leaveEvent(QEvent *event) {
+    QList<QPushButton*> buttons = findChildren<QPushButton*>();
+    for (QPushButton *button : buttons) {
+        button->hide();
+    }
+    QDialog::leaveEvent(event);
+}
+
+void map::mouseMoveEvent(QMouseEvent *event) {
+    updateButtonVisibility(event->position().toPoint());
+    QDialog::mouseMoveEvent(event);
+}
+
+void map::updateButtonVisibility(const QPoint &pos) {
+    QList<QPushButton*> buttons = findChildren<QPushButton*>();
+    bool buttonHovered = false;
+
+    for (QPushButton *button : buttons) {
+        if (button->geometry().contains(pos)) {
+            button->show();
+            buttonHovered = true;
+        } else {
+            button->hide();
+        }
+    }
+
+    // Si ningún botón está siendo tocado, todos los botones se ocultan
+    if (!buttonHovered) {
+        for (QPushButton *button : buttons) {
+            button->hide();
+        }
     }
 }

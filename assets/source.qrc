@@ -3,6 +3,7 @@
         <file>ui/Sheikah - Frame Art.png</file>
         <file>ui/Text=false, Continue=true.png</file>
         <file>ui/Selector.png</file>
+        <file>ui/Figma Profile Avatar.png</file>
     </qresource>
     <qresource prefix="/other">
         <file>other/Icon=Tower.png</file>

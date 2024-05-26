@@ -74,7 +74,7 @@ public:
 "}"));
         gridLayoutWidget = new QWidget(transporte);
         gridLayoutWidget->setObjectName("gridLayoutWidget");
-        gridLayoutWidget->setGeometry(QRect(10, 10, 481, 481));
+        gridLayoutWidget->setGeometry(QRect(10, 10, 495, 481));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
@@ -204,7 +204,6 @@ public:
 "    height: 75px;\n"
 "    border: 1px solid #E2DED3;\n"
 "    background: rgba(0, 0, 0, 0.9);\n"
-"    box-shadow: 0px 0px 8px 2px rgba(227, 227, 200, 0.8), inset 0px 0px 7px 3px rgba(246, 231, 152, 0.5);\n"
 "}"));
 
         horizontalLayout_2->addWidget(pushButton_2);
@@ -243,7 +242,6 @@ public:
 "    height: 75px;\n"
 "    border: 1px solid #E2DED3;\n"
 "    background: rgba(0, 0, 0, 0.9);\n"
-"    box-shadow: 0px 0px 8px 2px rgba(227, 227, 200, 0.8), inset 0px 0px 7px 3px rgba(246, 231, 152, 0.5);\n"
 "}"));
 
         horizontalLayout_2->addWidget(pushButton_3);
@@ -279,6 +277,21 @@ public:
         verticalLayout_6->addWidget(label_2);
 
         comboBox = new QComboBox(gridLayoutWidget);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
         comboBox->setObjectName("comboBox");
         QSizePolicy sizePolicy3(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
@@ -347,6 +360,19 @@ public:
         verticalLayout_5->addWidget(label_3);
 
         comboBox_2 = new QComboBox(gridLayoutWidget);
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
         comboBox_2->addItem(QString());
         comboBox_2->addItem(QString());
         comboBox_2->setObjectName("comboBox_2");
@@ -433,7 +459,6 @@ public:
 "    height: 75px;\n"
 "    border: 1px solid #E2DED3;\n"
 "    background: rgba(0, 0, 0, 0.9);\n"
-"    box-shadow: 0px 0px 8px 2px rgba(227, 227, 200, 0.8), inset 0px 0px 7px 3px rgba(246, 231, 152, 0.5);\n"
 "}"));
 
         horizontalLayout->addWidget(pushButton);
@@ -465,9 +490,38 @@ public:
         pushButton_2->setText(QCoreApplication::translate("transporte", "Viajar", nullptr));
         pushButton_3->setText(QCoreApplication::translate("transporte", "Volver", nullptr));
         label_2->setText(QCoreApplication::translate("transporte", " TORRE DE ORIGEN", nullptr));
+        comboBox->setItemText(0, QCoreApplication::translate("transporte", "Central Tower", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("transporte", "Dueling Peaks Tower", nullptr));
+        comboBox->setItemText(2, QCoreApplication::translate("transporte", "Hateno Tower", nullptr));
+        comboBox->setItemText(3, QCoreApplication::translate("transporte", "Lake Tower", nullptr));
+        comboBox->setItemText(4, QCoreApplication::translate("transporte", "Ridgeland Tower", nullptr));
+        comboBox->setItemText(5, QCoreApplication::translate("transporte", "Tabantha Tower", nullptr));
+        comboBox->setItemText(6, QCoreApplication::translate("transporte", "Wasteland Tower", nullptr));
+        comboBox->setItemText(7, QCoreApplication::translate("transporte", "Woodland Tower", nullptr));
+        comboBox->setItemText(8, QCoreApplication::translate("transporte", "Akkala Tower", nullptr));
+        comboBox->setItemText(9, QCoreApplication::translate("transporte", "Eldin Tower", nullptr));
+        comboBox->setItemText(10, QCoreApplication::translate("transporte", "Faron Tower", nullptr));
+        comboBox->setItemText(11, QCoreApplication::translate("transporte", "Gerudo Tower", nullptr));
+        comboBox->setItemText(12, QCoreApplication::translate("transporte", "Hebra Tower", nullptr));
+        comboBox->setItemText(13, QCoreApplication::translate("transporte", "Lanayru Tower", nullptr));
+        comboBox->setItemText(14, QCoreApplication::translate("transporte", "Great Plateau Tower", nullptr));
+
         label_3->setText(QCoreApplication::translate("transporte", " TORRE DE DESTINO", nullptr));
-        comboBox_2->setItemText(0, QCoreApplication::translate("transporte", "P1", nullptr));
-        comboBox_2->setItemText(1, QCoreApplication::translate("transporte", "P2", nullptr));
+        comboBox_2->setItemText(0, QCoreApplication::translate("transporte", "Gerudo Tower", nullptr));
+        comboBox_2->setItemText(1, QCoreApplication::translate("transporte", "Central Tower", nullptr));
+        comboBox_2->setItemText(2, QCoreApplication::translate("transporte", "Dueling Peaks Tower", nullptr));
+        comboBox_2->setItemText(3, QCoreApplication::translate("transporte", "Hateno Tower", nullptr));
+        comboBox_2->setItemText(4, QCoreApplication::translate("transporte", "Lake Tower", nullptr));
+        comboBox_2->setItemText(5, QCoreApplication::translate("transporte", "Ridgeland Tower", nullptr));
+        comboBox_2->setItemText(6, QCoreApplication::translate("transporte", "Tabantha Tower", nullptr));
+        comboBox_2->setItemText(7, QCoreApplication::translate("transporte", "Wasteland Tower", nullptr));
+        comboBox_2->setItemText(8, QCoreApplication::translate("transporte", "Woodland Tower", nullptr));
+        comboBox_2->setItemText(9, QCoreApplication::translate("transporte", "Akkala Tower", nullptr));
+        comboBox_2->setItemText(10, QCoreApplication::translate("transporte", "Eldin Tower", nullptr));
+        comboBox_2->setItemText(11, QCoreApplication::translate("transporte", "Faron Tower", nullptr));
+        comboBox_2->setItemText(12, QCoreApplication::translate("transporte", "Hebra Tower", nullptr));
+        comboBox_2->setItemText(13, QCoreApplication::translate("transporte", "Lanayru Tower", nullptr));
+        comboBox_2->setItemText(14, QCoreApplication::translate("transporte", "Great Plateau Tower", nullptr));
 
         pushButton->setText(QCoreApplication::translate("transporte", "Ver Rutas", nullptr));
     } // retranslateUi

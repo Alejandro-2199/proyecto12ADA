@@ -3,12 +3,20 @@
 #include "map/map.h"
 #include "transporte/transporte.h"
 #include "extra/extra.h"
+#include <QIcon>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    QIcon icon(":/ui/ui/Figma Profile Avatar.png");
+    this->setWindowIcon(icon);
+
+    QPalette palette = this->palette();
+    palette.setColor(QPalette::Window, QColor(60, 60, 60));
+    this->setPalette(palette);
 }
 
 MainWindow::~MainWindow()
