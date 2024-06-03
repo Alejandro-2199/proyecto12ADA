@@ -31,7 +31,9 @@ public:
     QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout;
     QLabel *label_4;
+    QHBoxLayout *horizontalLayout_3;
     QListView *listView;
+    QSpacerItem *horizontalSpacer_6;
     QVBoxLayout *verticalLayout_2;
     QLabel *label;
     QHBoxLayout *horizontalLayout_2;
@@ -74,7 +76,7 @@ public:
 "}"));
         gridLayoutWidget = new QWidget(transporte);
         gridLayoutWidget->setObjectName("gridLayoutWidget");
-        gridLayoutWidget->setGeometry(QRect(10, 10, 495, 481));
+        gridLayoutWidget->setGeometry(QRect(10, 10, 481, 481));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
@@ -99,6 +101,8 @@ public:
 
         verticalLayout->addWidget(label_4);
 
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
         listView = new QListView(gridLayoutWidget);
         listView->setObjectName("listView");
         QSizePolicy sizePolicy1(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Expanding);
@@ -134,7 +138,14 @@ public:
 "}\n"
 ""));
 
-        verticalLayout->addWidget(listView);
+        horizontalLayout_3->addWidget(listView);
+
+        horizontalSpacer_6 = new QSpacerItem(10, 10, QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_6);
+
+
+        verticalLayout->addLayout(horizontalLayout_3);
 
 
         gridLayout->addLayout(verticalLayout, 1, 1, 1, 1);

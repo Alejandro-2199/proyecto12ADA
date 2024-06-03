@@ -14,6 +14,8 @@ QtApplication {
         "extra/extra.cpp",
         "extra/extra.h",
         "extra/extra.ui",
+        "grafos/grafos.cpp",
+        "grafos/grafos.h",
         "main.cpp",
         "mainwindow.cpp",
         "mainwindow.h",
