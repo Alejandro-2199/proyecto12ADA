@@ -5,6 +5,7 @@
 #include <QVector>
 #include <QHash>
 #include <QList>
+#include <QStandardItemModel>
 #include "../grafos/grafos.h"
 
 namespace Ui {
@@ -26,9 +27,17 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_manabox_clicked();
+
+    void on_timebox_clicked();
+
+    void on_connectionbox_clicked();
+
+
 private:
     Ui::transporte *ui;
     QHash<int, QList<int>> adjList;
+    Grafo *m_Grafo;
+    QStandardItemModel model;
 };
-
 #endif // TRANSPORTE_H

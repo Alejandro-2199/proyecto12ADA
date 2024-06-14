@@ -11,14 +11,16 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -29,30 +31,38 @@ class Ui_transporte
 public:
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
-    QVBoxLayout *verticalLayout;
-    QLabel *label_4;
-    QHBoxLayout *horizontalLayout_3;
-    QListView *listView;
-    QSpacerItem *horizontalSpacer_6;
-    QVBoxLayout *verticalLayout_2;
-    QLabel *label;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton_2;
     QSpacerItem *horizontalSpacer_5;
     QPushButton *pushButton_3;
     QSpacerItem *horizontalSpacer_4;
+    QVBoxLayout *verticalLayout;
+    QLabel *label_4;
+    QHBoxLayout *horizontalLayout_3;
+    QTableView *tableView;
+    QSpacerItem *horizontalSpacer_6;
+    QVBoxLayout *verticalLayout_2;
+    QLabel *label;
+    QGridLayout *gridLayout_2;
     QVBoxLayout *verticalLayout_3;
     QSpacerItem *verticalSpacer;
     QVBoxLayout *verticalLayout_6;
     QLabel *label_2;
-    QComboBox *comboBox;
+    QComboBox *comboBoxOrigen;
     QSpacerItem *verticalSpacer_3;
     QVBoxLayout *verticalLayout_4;
     QVBoxLayout *verticalLayout_5;
     QLabel *label_3;
-    QComboBox *comboBox_2;
+    QComboBox *comboBoxDestino;
     QSpacerItem *verticalSpacer_2;
+    QVBoxLayout *verticalLayout_7;
+    QLabel *label_5;
+    QHBoxLayout *horizontalLayout_4;
+    QCheckBox *manabox;
+    QCheckBox *timebox;
+    QCheckBox *connectionbox;
+    QSpacerItem *verticalSpacer_4;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *pushButton;
@@ -62,9 +72,9 @@ public:
     {
         if (transporte->objectName().isEmpty())
             transporte->setObjectName("transporte");
-        transporte->resize(500, 500);
-        transporte->setMinimumSize(QSize(500, 500));
-        transporte->setMaximumSize(QSize(500, 500));
+        transporte->resize(1000, 500);
+        transporte->setMinimumSize(QSize(1000, 500));
+        transporte->setMaximumSize(QSize(1000, 500));
         transporte->setLayoutDirection(Qt::LeftToRight);
         transporte->setStyleSheet(QString::fromUtf8("QDialog {\n"
 "	image: url('C:/Users/aleja/OneDrive/Documents/Qt/Proyecto_2/assets/other/Illustration=Slate.png');\n"
@@ -76,109 +86,15 @@ public:
 "}"));
         gridLayoutWidget = new QWidget(transporte);
         gridLayoutWidget->setObjectName("gridLayoutWidget");
-        gridLayoutWidget->setGeometry(QRect(10, 10, 481, 481));
+        gridLayoutWidget->setGeometry(QRect(10, 10, 981, 481));
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(gridLayoutWidget->sizePolicy().hasHeightForWidth());
+        gridLayoutWidget->setSizePolicy(sizePolicy);
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setSizeConstraint(QLayout::SetFixedSize);
-        label_4 = new QLabel(gridLayoutWidget);
-        label_4->setObjectName("label_4");
-        QSizePolicy sizePolicy(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
-        label_4->setSizePolicy(sizePolicy);
-        QFont font;
-        font.setFamilies({QString::fromUtf8("The Wild Breath of Zelda")});
-        font.setPointSize(20);
-        label_4->setFont(font);
-        label_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"    color: #FFF8E7;\n"
-"	padding: 2 px;\n"
-"}"));
-
-        verticalLayout->addWidget(label_4);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        listView = new QListView(gridLayoutWidget);
-        listView->setObjectName("listView");
-        QSizePolicy sizePolicy1(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(listView->sizePolicy().hasHeightForWidth());
-        listView->setSizePolicy(sizePolicy1);
-        listView->setMaximumSize(QSize(250, 350));
-        listView->setStyleSheet(QString::fromUtf8("QListWidget {\n"
-"    background-color: rgba(0, 0, 0, 0.6);\n"
-"    border: 1px solid rgba(226, 222, 211, 0.3);\n"
-"    border-radius: 4px;\n"
-"    color: #E2DED3;\n"
-"    font-family: 'Roboto';\n"
-"    font-style: italic;\n"
-"    font-weight: 500;\n"
-"    font-size: 20px;\n"
-"    padding: 5px;\n"
-"    margin: 2px; \n"
-"}\n"
-"\n"
-"QListWidget::item {\n"
-"    padding: 5px;\n"
-"}\n"
-"\n"
-"QListWidget::item:selected {\n"
-"    background-color: rgba(0, 0, 0, 0.9);\n"
-"    color: #E2DED3;\n"
-"}\n"
-"\n"
-"QListWidget::item:hover {\n"
-"    background-color: rgba(0, 0, 0, 0.8);\n"
-"}\n"
-""));
-
-        horizontalLayout_3->addWidget(listView);
-
-        horizontalSpacer_6 = new QSpacerItem(10, 10, QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer_6);
-
-
-        verticalLayout->addLayout(horizontalLayout_3);
-
-
-        gridLayout->addLayout(verticalLayout, 1, 1, 1, 1);
-
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName("verticalLayout_2");
-        verticalLayout_2->setSizeConstraint(QLayout::SetNoConstraint);
-        label = new QLabel(gridLayoutWidget);
-        label->setObjectName("label");
-        QSizePolicy sizePolicy2(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy2);
-        label->setMinimumSize(QSize(0, 50));
-        label->setMaximumSize(QSize(16777215, 50));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("The Wild Breath of Zelda")});
-        font1.setPointSize(36);
-        label->setFont(font1);
-        label->setLayoutDirection(Qt::LeftToRight);
-        label->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"    color: #FFF8E7;\n"
-"\n"
-"}"));
-        label->setTextFormat(Qt::AutoText);
-        label->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_2->addWidget(label);
-
-
-        gridLayout->addLayout(verticalLayout_2, 0, 0, 1, 2);
-
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
@@ -264,6 +180,76 @@ public:
 
         gridLayout->addLayout(horizontalLayout_2, 2, 0, 1, 2);
 
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setSizeConstraint(QLayout::SetFixedSize);
+        label_4 = new QLabel(gridLayoutWidget);
+        label_4->setObjectName("label_4");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
+        label_4->setSizePolicy(sizePolicy1);
+        QFont font;
+        font.setFamilies({QString::fromUtf8("The Wild Breath of Zelda")});
+        font.setPointSize(20);
+        label_4->setFont(font);
+        label_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"    color: #FFF8E7;\n"
+"	padding: 2 px;\n"
+"}"));
+
+        verticalLayout->addWidget(label_4);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        horizontalLayout_3->setSizeConstraint(QLayout::SetMaximumSize);
+        tableView = new QTableView(gridLayoutWidget);
+        tableView->setObjectName("tableView");
+        sizePolicy.setHeightForWidth(tableView->sizePolicy().hasHeightForWidth());
+        tableView->setSizePolicy(sizePolicy);
+        tableView->setMinimumSize(QSize(700, 200));
+
+        horizontalLayout_3->addWidget(tableView, 0, Qt::AlignHCenter);
+
+        horizontalSpacer_6 = new QSpacerItem(10, 10, QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_6);
+
+
+        verticalLayout->addLayout(horizontalLayout_3);
+
+
+        gridLayout->addLayout(verticalLayout, 1, 1, 1, 1);
+
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout_2->setSizeConstraint(QLayout::SetNoConstraint);
+        label = new QLabel(gridLayoutWidget);
+        label->setObjectName("label");
+        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy);
+        label->setMinimumSize(QSize(0, 50));
+        label->setMaximumSize(QSize(16777215, 50));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("The Wild Breath of Zelda")});
+        font1.setPointSize(36);
+        label->setFont(font1);
+        label->setLayoutDirection(Qt::LeftToRight);
+        label->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"    color: #FFF8E7;\n"
+"\n"
+"}"));
+        label->setTextFormat(Qt::AutoText);
+        label->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_2->addWidget(label);
+
+
+        gridLayout->addLayout(verticalLayout_2, 0, 0, 1, 2);
+
+        gridLayout_2 = new QGridLayout();
+        gridLayout_2->setObjectName("gridLayout_2");
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setObjectName("verticalLayout_3");
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
@@ -275,8 +261,8 @@ public:
         verticalLayout_6->setSizeConstraint(QLayout::SetFixedSize);
         label_2 = new QLabel(gridLayoutWidget);
         label_2->setObjectName("label_2");
-        sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
-        label_2->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy1);
         label_2->setMinimumSize(QSize(0, 30));
         label_2->setMaximumSize(QSize(16777215, 30));
         label_2->setFont(font);
@@ -287,31 +273,31 @@ public:
 
         verticalLayout_6->addWidget(label_2);
 
-        comboBox = new QComboBox(gridLayoutWidget);
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->setObjectName("comboBox");
-        QSizePolicy sizePolicy3(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
-        comboBox->setSizePolicy(sizePolicy3);
-        comboBox->setMinimumSize(QSize(0, 30));
-        comboBox->setMaximumSize(QSize(16777215, 30));
-        comboBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+        comboBoxOrigen = new QComboBox(gridLayoutWidget);
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->addItem(QString());
+        comboBoxOrigen->setObjectName("comboBoxOrigen");
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(comboBoxOrigen->sizePolicy().hasHeightForWidth());
+        comboBoxOrigen->setSizePolicy(sizePolicy2);
+        comboBoxOrigen->setMinimumSize(QSize(0, 30));
+        comboBoxOrigen->setMaximumSize(QSize(250, 30));
+        comboBoxOrigen->setStyleSheet(QString::fromUtf8("QComboBox {\n"
 "    background-color: rgba(0, 0, 0, 0.6);\n"
 "    border: none; \n"
 "    border-radius: 4px;\n"
@@ -342,9 +328,9 @@ public:
 "    border: 1px solid rgba(226, 222, 211, 0.3);\n"
 "}"));
 
-        verticalLayout_6->addWidget(comboBox);
+        verticalLayout_6->addWidget(comboBoxOrigen);
 
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
+        verticalSpacer_3 = new QSpacerItem(10, 30, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
         verticalLayout_6->addItem(verticalSpacer_3);
 
@@ -358,8 +344,8 @@ public:
         verticalLayout_5->setSizeConstraint(QLayout::SetFixedSize);
         label_3 = new QLabel(gridLayoutWidget);
         label_3->setObjectName("label_3");
-        sizePolicy.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
-        label_3->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
+        label_3->setSizePolicy(sizePolicy1);
         label_3->setMinimumSize(QSize(0, 30));
         label_3->setMaximumSize(QSize(16777215, 30));
         label_3->setFont(font);
@@ -370,26 +356,26 @@ public:
 
         verticalLayout_5->addWidget(label_3);
 
-        comboBox_2 = new QComboBox(gridLayoutWidget);
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->setObjectName("comboBox_2");
-        comboBox_2->setMinimumSize(QSize(0, 30));
-        comboBox_2->setMaximumSize(QSize(16777215, 30));
-        comboBox_2->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+        comboBoxDestino = new QComboBox(gridLayoutWidget);
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->addItem(QString());
+        comboBoxDestino->setObjectName("comboBoxDestino");
+        comboBoxDestino->setMinimumSize(QSize(0, 30));
+        comboBoxDestino->setMaximumSize(QSize(250, 30));
+        comboBoxDestino->setStyleSheet(QString::fromUtf8("QComboBox {\n"
 "    background-color: rgba(0, 0, 0, 0.6);\n"
 "    border: none; \n"
 "    border-radius: 4px;\n"
@@ -420,14 +406,94 @@ public:
 "    border: 1px solid rgba(226, 222, 211, 0.3);\n"
 "}"));
 
-        verticalLayout_5->addWidget(comboBox_2);
+        verticalLayout_5->addWidget(comboBoxDestino);
 
 
         verticalLayout_4->addLayout(verticalLayout_5);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
+        verticalSpacer_2 = new QSpacerItem(10, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
 
         verticalLayout_4->addItem(verticalSpacer_2);
+
+        verticalLayout_7 = new QVBoxLayout();
+        verticalLayout_7->setObjectName("verticalLayout_7");
+        label_5 = new QLabel(gridLayoutWidget);
+        label_5->setObjectName("label_5");
+        sizePolicy1.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
+        label_5->setSizePolicy(sizePolicy1);
+        label_5->setMinimumSize(QSize(0, 30));
+        label_5->setMaximumSize(QSize(16777215, 30));
+        label_5->setFont(font);
+        label_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"    color: #FFF8E7;\n"
+"	padding: 2 px;\n"
+"}"));
+
+        verticalLayout_7->addWidget(label_5);
+
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName("horizontalLayout_4");
+        manabox = new QCheckBox(gridLayoutWidget);
+        manabox->setObjectName("manabox");
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("The Wild Breath of Zelda")});
+        font2.setPointSize(14);
+        manabox->setFont(font2);
+        manabox->setStyleSheet(QString::fromUtf8("QCheckBox {\n"
+"    color: #E2DED3; \n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    background-color: #FFD700;\n"
+"	border-radius: 4px;\n"
+"	border: 1px solid rgba(226, 222, 211, 0.3);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked:hover {\n"
+"    border: 1px solid rgb(50, 50, 50);\n"
+"}"));
+
+        horizontalLayout_4->addWidget(manabox);
+
+        timebox = new QCheckBox(gridLayoutWidget);
+        timebox->setObjectName("timebox");
+        timebox->setFont(font2);
+        timebox->setStyleSheet(QString::fromUtf8("QCheckBox {\n"
+"    color: #E2DED3; \n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    background-color: #FFD700;\n"
+"	border-radius: 4px;\n"
+"	border: 1px solid rgba(226, 222, 211, 0.3);\n"
+"}"));
+
+        horizontalLayout_4->addWidget(timebox);
+
+        connectionbox = new QCheckBox(gridLayoutWidget);
+        connectionbox->setObjectName("connectionbox");
+        connectionbox->setFont(font2);
+        connectionbox->setStyleSheet(QString::fromUtf8("QCheckBox {\n"
+"    color: #E2DED3; \n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    background-color: #FFD700;\n"
+"	border-radius: 4px;\n"
+"	border: 1px solid rgba(226, 222, 211, 0.3);\n"
+"}"));
+
+        horizontalLayout_4->addWidget(connectionbox);
+
+
+        verticalLayout_7->addLayout(horizontalLayout_4);
+
+
+        verticalLayout_4->addLayout(verticalLayout_7);
+
+        verticalSpacer_4 = new QSpacerItem(10, 10, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
+
+        verticalLayout_4->addItem(verticalSpacer_4);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
@@ -437,11 +503,11 @@ public:
 
         pushButton = new QPushButton(gridLayoutWidget);
         pushButton->setObjectName("pushButton");
-        QSizePolicy sizePolicy4(QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Maximum);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy3(QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Maximum);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy3);
         pushButton->setMinimumSize(QSize(100, 40));
         pushButton->setMaximumSize(QSize(100, 40));
         pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
@@ -485,7 +551,10 @@ public:
         verticalLayout_3->addLayout(verticalLayout_4);
 
 
-        gridLayout->addLayout(verticalLayout_3, 1, 0, 1, 1);
+        gridLayout_2->addLayout(verticalLayout_3, 0, 0, 1, 1);
+
+
+        gridLayout->addLayout(gridLayout_2, 1, 0, 1, 1);
 
 
         retranslateUi(transporte);
@@ -496,44 +565,48 @@ public:
     void retranslateUi(QDialog *transporte)
     {
         transporte->setWindowTitle(QCoreApplication::translate("transporte", "Dialog", nullptr));
-        label_4->setText(QCoreApplication::translate("transporte", " MENU DE RUTAS", nullptr));
-        label->setText(QCoreApplication::translate("transporte", "MENU DE TRANSPORTE", nullptr));
         pushButton_2->setText(QCoreApplication::translate("transporte", "Viajar", nullptr));
         pushButton_3->setText(QCoreApplication::translate("transporte", "Volver", nullptr));
+        label_4->setText(QCoreApplication::translate("transporte", " MENU DE RUTAS", nullptr));
+        label->setText(QCoreApplication::translate("transporte", "MENU DE TRANSPORTE", nullptr));
         label_2->setText(QCoreApplication::translate("transporte", " TORRE DE ORIGEN", nullptr));
-        comboBox->setItemText(0, QCoreApplication::translate("transporte", "Central Tower", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("transporte", "Dueling Peaks Tower", nullptr));
-        comboBox->setItemText(2, QCoreApplication::translate("transporte", "Hateno Tower", nullptr));
-        comboBox->setItemText(3, QCoreApplication::translate("transporte", "Lake Tower", nullptr));
-        comboBox->setItemText(4, QCoreApplication::translate("transporte", "Ridgeland Tower", nullptr));
-        comboBox->setItemText(5, QCoreApplication::translate("transporte", "Tabantha Tower", nullptr));
-        comboBox->setItemText(6, QCoreApplication::translate("transporte", "Wasteland Tower", nullptr));
-        comboBox->setItemText(7, QCoreApplication::translate("transporte", "Woodland Tower", nullptr));
-        comboBox->setItemText(8, QCoreApplication::translate("transporte", "Akkala Tower", nullptr));
-        comboBox->setItemText(9, QCoreApplication::translate("transporte", "Eldin Tower", nullptr));
-        comboBox->setItemText(10, QCoreApplication::translate("transporte", "Faron Tower", nullptr));
-        comboBox->setItemText(11, QCoreApplication::translate("transporte", "Gerudo Tower", nullptr));
-        comboBox->setItemText(12, QCoreApplication::translate("transporte", "Hebra Tower", nullptr));
-        comboBox->setItemText(13, QCoreApplication::translate("transporte", "Lanayru Tower", nullptr));
-        comboBox->setItemText(14, QCoreApplication::translate("transporte", "Great Plateau Tower", nullptr));
+        comboBoxOrigen->setItemText(0, QCoreApplication::translate("transporte", "Central Tower", nullptr));
+        comboBoxOrigen->setItemText(1, QCoreApplication::translate("transporte", "Dueling Peaks Tower", nullptr));
+        comboBoxOrigen->setItemText(2, QCoreApplication::translate("transporte", "Hateno Tower", nullptr));
+        comboBoxOrigen->setItemText(3, QCoreApplication::translate("transporte", "Lake Tower", nullptr));
+        comboBoxOrigen->setItemText(4, QCoreApplication::translate("transporte", "Ridgeland Tower", nullptr));
+        comboBoxOrigen->setItemText(5, QCoreApplication::translate("transporte", "Tabantha Tower", nullptr));
+        comboBoxOrigen->setItemText(6, QCoreApplication::translate("transporte", "Wasteland Tower", nullptr));
+        comboBoxOrigen->setItemText(7, QCoreApplication::translate("transporte", "Woodland Tower", nullptr));
+        comboBoxOrigen->setItemText(8, QCoreApplication::translate("transporte", "Akkala Tower", nullptr));
+        comboBoxOrigen->setItemText(9, QCoreApplication::translate("transporte", "Eldin Tower", nullptr));
+        comboBoxOrigen->setItemText(10, QCoreApplication::translate("transporte", "Faron Tower", nullptr));
+        comboBoxOrigen->setItemText(11, QCoreApplication::translate("transporte", "Gerudo Tower", nullptr));
+        comboBoxOrigen->setItemText(12, QCoreApplication::translate("transporte", "Hebra Tower", nullptr));
+        comboBoxOrigen->setItemText(13, QCoreApplication::translate("transporte", "Lanayru Tower", nullptr));
+        comboBoxOrigen->setItemText(14, QCoreApplication::translate("transporte", "Great Plateau Tower", nullptr));
 
         label_3->setText(QCoreApplication::translate("transporte", " TORRE DE DESTINO", nullptr));
-        comboBox_2->setItemText(0, QCoreApplication::translate("transporte", "Gerudo Tower", nullptr));
-        comboBox_2->setItemText(1, QCoreApplication::translate("transporte", "Central Tower", nullptr));
-        comboBox_2->setItemText(2, QCoreApplication::translate("transporte", "Dueling Peaks Tower", nullptr));
-        comboBox_2->setItemText(3, QCoreApplication::translate("transporte", "Hateno Tower", nullptr));
-        comboBox_2->setItemText(4, QCoreApplication::translate("transporte", "Lake Tower", nullptr));
-        comboBox_2->setItemText(5, QCoreApplication::translate("transporte", "Ridgeland Tower", nullptr));
-        comboBox_2->setItemText(6, QCoreApplication::translate("transporte", "Tabantha Tower", nullptr));
-        comboBox_2->setItemText(7, QCoreApplication::translate("transporte", "Wasteland Tower", nullptr));
-        comboBox_2->setItemText(8, QCoreApplication::translate("transporte", "Woodland Tower", nullptr));
-        comboBox_2->setItemText(9, QCoreApplication::translate("transporte", "Akkala Tower", nullptr));
-        comboBox_2->setItemText(10, QCoreApplication::translate("transporte", "Eldin Tower", nullptr));
-        comboBox_2->setItemText(11, QCoreApplication::translate("transporte", "Faron Tower", nullptr));
-        comboBox_2->setItemText(12, QCoreApplication::translate("transporte", "Hebra Tower", nullptr));
-        comboBox_2->setItemText(13, QCoreApplication::translate("transporte", "Lanayru Tower", nullptr));
-        comboBox_2->setItemText(14, QCoreApplication::translate("transporte", "Great Plateau Tower", nullptr));
+        comboBoxDestino->setItemText(0, QCoreApplication::translate("transporte", "Gerudo Tower", nullptr));
+        comboBoxDestino->setItemText(1, QCoreApplication::translate("transporte", "Central Tower", nullptr));
+        comboBoxDestino->setItemText(2, QCoreApplication::translate("transporte", "Dueling Peaks Tower", nullptr));
+        comboBoxDestino->setItemText(3, QCoreApplication::translate("transporte", "Hateno Tower", nullptr));
+        comboBoxDestino->setItemText(4, QCoreApplication::translate("transporte", "Lake Tower", nullptr));
+        comboBoxDestino->setItemText(5, QCoreApplication::translate("transporte", "Ridgeland Tower", nullptr));
+        comboBoxDestino->setItemText(6, QCoreApplication::translate("transporte", "Tabantha Tower", nullptr));
+        comboBoxDestino->setItemText(7, QCoreApplication::translate("transporte", "Wasteland Tower", nullptr));
+        comboBoxDestino->setItemText(8, QCoreApplication::translate("transporte", "Woodland Tower", nullptr));
+        comboBoxDestino->setItemText(9, QCoreApplication::translate("transporte", "Akkala Tower", nullptr));
+        comboBoxDestino->setItemText(10, QCoreApplication::translate("transporte", "Eldin Tower", nullptr));
+        comboBoxDestino->setItemText(11, QCoreApplication::translate("transporte", "Faron Tower", nullptr));
+        comboBoxDestino->setItemText(12, QCoreApplication::translate("transporte", "Hebra Tower", nullptr));
+        comboBoxDestino->setItemText(13, QCoreApplication::translate("transporte", "Lanayru Tower", nullptr));
+        comboBoxDestino->setItemText(14, QCoreApplication::translate("transporte", "Great Plateau Tower", nullptr));
 
+        label_5->setText(QCoreApplication::translate("transporte", "VIAJAR POR:", nullptr));
+        manabox->setText(QCoreApplication::translate("transporte", "MANA", nullptr));
+        timebox->setText(QCoreApplication::translate("transporte", "TIEMPO", nullptr));
+        connectionbox->setText(QCoreApplication::translate("transporte", "SALTOS", nullptr));
         pushButton->setText(QCoreApplication::translate("transporte", "Ver Rutas", nullptr));
     } // retranslateUi
 

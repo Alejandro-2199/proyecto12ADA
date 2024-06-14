@@ -46,7 +46,6 @@ public:
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_7;
     QSpacerItem *horizontalSpacer_11;
-    QPushButton *pushButton_2;
     QSpacerItem *horizontalSpacer_12;
     QSpacerItem *verticalSpacer;
     QSpacerItem *horizontalSpacer_2;
@@ -65,17 +64,17 @@ public:
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Button, brush);
         palette.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush);
         QBrush brush1(QColor(64, 65, 66, 255));
         brush1.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
         palette.setBrush(QPalette::Active, QPalette::Highlight, brush1);
         palette.setBrush(QPalette::Inactive, QPalette::Button, brush);
         palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush);
         palette.setBrush(QPalette::Inactive, QPalette::Highlight, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush);
         MainWindow->setPalette(palette);
         MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
 "    background-image: url('C:/Users/aleja/OneDrive/Documents/Qt/Proyecto_2/assets/backgrounds/Property 1=Center.png');\n"
@@ -247,47 +246,6 @@ public:
 
         horizontalLayout_7->addItem(horizontalSpacer_11);
 
-        pushButton_2 = new QPushButton(horizontalLayoutWidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setMinimumSize(QSize(200, 50));
-        pushButton_2->setMaximumSize(QSize(200, 50));
-        pushButton_2->setContextMenuPolicy(Qt::CustomContextMenu);
-        pushButton_2->setLayoutDirection(Qt::LeftToRight);
-        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    width: 202px; \n"
-"    height: 52px;\n"
-"    background-color: rgba(0, 0, 0, 0.6);\n"
-"    border: none; \n"
-"    border-radius: 4px;\n"
-"    color: #E2DED3; \n"
-"    font-family: 'Roboto';\n"
-"    font-style: italic;\n"
-"    font-weight: 500;\n"
-"    font-size: 20px;\n"
-"    padding: 0; \n"
-"    text-align: center;\n"
-"    margin: 1px; \n"
-"    border: 1px solid rgba(226, 222, 211, 0.3); \n"
-"}\n"
-"\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background: rgba(0, 0, 0, 0.2); \n"
-"}\n"
-"\n"
-"\n"
-"QPushButton:hover {\n"
-"	width: 346px;\n"
-"    height: 75px;\n"
-"    border: 1px solid #E2DED3;\n"
-"    background: rgba(0, 0, 0, 0.9);\n"
-"}\n"
-"\n"
-"\n"
-""));
-
-        horizontalLayout_7->addWidget(pushButton_2);
-
         horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout_7->addItem(horizontalSpacer_12);
@@ -325,7 +283,6 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Transporte", nullptr));
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "Mapa", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Extra", nullptr));
     } // retranslateUi
 
 };
