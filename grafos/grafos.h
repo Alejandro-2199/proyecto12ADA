@@ -19,7 +19,6 @@ struct Edge {
 typedef QHash<QString, QHash<int, QList<Edge>>> MultiGrafo;
 
 
-
 class Grafo {
 public:
     Grafo();

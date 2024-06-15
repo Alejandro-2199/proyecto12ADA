@@ -3,6 +3,8 @@
 #include "../grafos/grafos.h"
 #include "../simulacion/simulacion.h"
 
+QList<QString> opcionMarcada;
+
 transporte::transporte(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::transporte)
@@ -11,11 +13,31 @@ transporte::transporte(QWidget *parent)
 
     model.setHorizontalHeaderLabels({"Costo", "Rutas"});
     ui->tableView->setModel(&model);
+
+    connect(ui->tableView->selectionModel(), &QItemSelectionModel::selectionChanged,
+            this, &transporte::onSelectionChanged);
 }
 
 transporte::~transporte()
 {
     delete ui;
+}
+
+void transporte::onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
+{
+    QModelIndexList selectedIndexes = selected.indexes();
+
+    if (!selectedIndexes.isEmpty()) {
+        for (const QModelIndex &index : selectedIndexes) {
+            QVariant data = index.data(Qt::DisplayRole);
+            if (data.isValid() && data.canConvert<QString>()) {
+                QString nombreTorre = data.toString();
+                QStringList nombres = nombreTorre.split(", ", Qt::SkipEmptyParts);
+                opcionMarcada.append(nombres);
+            }
+        }
+        qDebug() << "Transporte:" << opcionMarcada;
+    }
 }
 
 void transporte::on_pushButton_3_clicked()
@@ -27,15 +49,13 @@ void transporte::on_pushButton_3_clicked()
 void transporte::on_pushButton_2_clicked()
 {
     simulacion *simulacionWindow = new simulacion(this);
-
     simulacionWindow->exec();
 }
-
-
 
 void transporte::on_pushButton_clicked()
 {
     model.clear();
+    opcionMarcada.clear();
 
     m_Grafo = new Grafo();
     QString origen = ui->comboBoxOrigen->currentText();
@@ -67,17 +87,20 @@ void transporte::on_pushButton_clicked()
             QStandardItem *costoItem = new QStandardItem(QString::number(costo));
 
             QString rutasString;
-            for (const QList<QString> &ruta : rutas) {
-                rutasString += ruta.join(", ") + "; ";
+            if (!rutas.isEmpty()) {
+                const QList<QString> &ruta = rutas[0];
+                rutasString = ruta.join(", ");
             }
-            QStandardItem *rutaItem = new QStandardItem(rutasString);
+
+            QStandardItem *rutasItem = new QStandardItem(rutasString);
 
             QList<QStandardItem *> rowData;
             rowData.append(costoItem);
-            rowData.append(rutaItem);
+            rowData.append(rutasItem);
 
             model.appendRow(rowData);
         }
+
         if (data.isEmpty()){
             model.clear();
             model.setHorizontalHeaderLabels({"No hay rutas disponibles"});
@@ -113,17 +136,20 @@ void transporte::on_pushButton_clicked()
             QStandardItem *costoItem = new QStandardItem(QString::number(costo));
 
             QString rutasString;
-            for (const QList<QString> &ruta : rutas) {
-                rutasString += ruta.join(", ") + "; ";
+            if (!rutas.isEmpty()) {
+                const QList<QString> &ruta = rutas[0];
+                rutasString = ruta.join(", ");
             }
-            QStandardItem *rutaItem = new QStandardItem(rutasString);
+
+            QStandardItem *rutasItem = new QStandardItem(rutasString);
 
             QList<QStandardItem *> rowData;
             rowData.append(costoItem);
-            rowData.append(rutaItem);
+            rowData.append(rutasItem);
 
             model.appendRow(rowData);
         }
+
         if (data.isEmpty()){
             model.clear();
             model.setHorizontalHeaderLabels({"No hay rutas disponibles"});
@@ -138,6 +164,7 @@ void transporte::on_pushButton_clicked()
         ui->tableView->setModel(&model);
 
         QHash<int, QList<QList<QString>>> saltos = m_Grafo->Top5_conexiones(m_Grafo->multiGrafo, origen, destino);
+        m_Grafo->print_top5(m_Grafo->Top5_conexiones(m_Grafo->multiGrafo, "Central Tower", "Hateno Tower"));
 
         QList<QPair<int, QList<QList<QString>>>> data;
 
@@ -159,19 +186,20 @@ void transporte::on_pushButton_clicked()
             QStandardItem *costoItem = new QStandardItem(QString::number(costo));
 
             QString rutasString;
-            for (const QList<QString> &ruta : rutas) {
-                rutasString += ruta.join(", ") + "; ";
+            if (!rutas.isEmpty()) {
+                const QList<QString> &ruta = rutas[0];
+                rutasString = ruta.join(", ");
             }
-            QStandardItem *rutaItem = new QStandardItem(rutasString);
-            ui->tableView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Fixed);
-            ui->tableView->setColumnWidth(1, 500);
+
+            QStandardItem *rutasItem = new QStandardItem(rutasString);
 
             QList<QStandardItem *> rowData;
             rowData.append(costoItem);
-            rowData.append(rutaItem);
+            rowData.append(rutasItem);
 
             model.appendRow(rowData);
         }
+
         if (data.isEmpty()){
             model.clear();
             model.setHorizontalHeaderLabels({"No hay rutas disponibles"});
